@@ -1,0 +1,52 @@
+@import 'text';
+@import 'colors';
+
+.header {
+    display: flex;
+    max-width: 1600px;
+    height: 70px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid $gray200;
+    margin-top: 10px;
+
+
+    &__title{
+        width: 69px;
+        height: 36px;
+        font-weight: $font-bold;
+        font-size: nomal;
+        font-size: $text-xl1;
+        line-height: 150%;
+        color: $gray800;
+    }
+
+
+    &__information{
+        display: flex;
+        height: 100%;
+        align-items:  center;
+
+        
+        i{
+            padding: 4px;
+            margin-right: 12px;
+            font-size: 1.3rem;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: solid 1px $gray300;
+        }
+    }
+
+}
+
+
+
+
+
