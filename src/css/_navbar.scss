@@ -1,4 +1,84 @@
 .navbar{
-    background-color: red;
-    width: calc((100% / 12) * 2);
+    min-width: calc((100% / 12) * 2);
+    border-right: 1px solid $gray200;
+    border-bottom: 1px solid $gray200;
+
+    &__title {
+        display: flex;
+        width: 100%;
+        height: 64px;
+        align-items: center;
+        border-bottom: 1px solid $gray200;
+        padding: 0 23.5px;
+
+
+        i{
+            color: #000;
+            font-size: 1.3rem;
+            padding-right: 16px;
+        }
+
+
+        p{
+            width: 100%;
+            color: $gray900;
+            font-size: $text-base;
+            font-weight: $font-medium;
+            line-height: 150%;
+            font-style: normal;
+            transition: background 0.3s linear;
+
+            &:hover {
+                cursor: pointer;
+                color: $blue600;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+
+    &__list {
+        padding: 0 23.5px;
+        list-style: none;
+
+
+
+        &__item {
+            display: flex;
+            padding-top: 24px;
+
+
+            i {
+                width: 24px;
+                color: #000;
+                font-size: 1.2rem;
+                margin-right: 16px;
+            }
+
+            a {
+                width: 100%;
+                text-decoration: none;
+                font-size: $text-base;
+                font-weight: $font-medium;
+                line-height: 150%;
+                font-style: normal;
+                color: $gray900;
+                transition: background 0.3s linear;
+                -webkit-tap-highlight-color: transparent;
+
+
+                &:hover {
+                    cursor: pointer;
+                    color: $blue600;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
 }
+
+.active{
+    color: $blue600 !important;
+}
+

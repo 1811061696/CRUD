@@ -49,3 +49,51 @@ $blue300: #A4CAFE;
 $blue200: #C3FDFD;
 $blue100: #E1EFFE;
 $blue50:  #EBF5FF;
+
+
+$background-color: #fff;
+
+
+$box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+
+.label-success{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 22px;
+    background: $green100;
+    color: $green800 !important;
+    border-radius: 10px;
+}
+
+.label-primary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 22px;
+    background: $blue100;
+    color: $blue800 !important;
+    border-radius: 10px;
+}
+
+.label-danger{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 22px;
+    background: $red100;
+    color: $red800 !important;
+    border-radius: 10px;
+}
+
+.background__table {
+    background-color: $gray50 !important;
+    border-radius: 12px 0px 0px 12px;
+}

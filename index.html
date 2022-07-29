@@ -20,12 +20,205 @@
         </header>
         <div class="container">
             <div class="navbar">
-                <h1>navbar</h1>
+                <div class="navbar__title ">
+                    <i class="fas fa-solid fa-square-poll-vertical active "></i>
+                    <p class="active">Bảng điều khiển</p>
+                </div>
+                <ul class="navbar__list">
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-database"></i>
+                        <a href="/">
+                            <p>Danh sách sản phẩm</p>
+                        </a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="/">
+                            <p>Khách hàng</p>
+                        </a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <a href="/">
+                            <p>Đơn hàng</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="content">
-                <h1>content</h1>
+                <div class="content__turnover">
+                    <div class="content__turnover_header">
+                        <h4>Doanh thu</h4>
+                        <img src="./src/image/waning.png" alt="">
+                    </div>
+                </div>
+                <div class="content__infomation">
+                    <div class="content__infomation__user">
+                        <h1>Khách hàng mới</h1>
+                        <ul class="content__infomation__user__list">
+                            <li class="user__list-item">
+                                <img src="https://cdnimg.vietnamplus.vn/uploaded/bokttj/2022_03_10/aldrin_apollo.jpg" alt="">
+                                <div class="user__item-infomation">
+                                    <h2>Nguyễn Quang Thành</h2>
+                                    <p>nguyenquangthanh0412@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="user__list-item">
+                                <img src="https://cdnimg.vietnamplus.vn/uploaded/bokttj/2022_03_10/aldrin_apollo.jpg" alt="">
+                                <div class="user__item-infomation">
+                                    <h2>Nguyễn Quang Thành</h2>
+                                    <p>nguyenquangthanh0412@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="user__list-item">
+                                <img src="https://cdnimg.vietnamplus.vn/uploaded/bokttj/2022_03_10/aldrin_apollo.jpg" alt="">
+                                <div class="user__item-infomation">
+                                    <h2>Nguyễn Quang Thành</h2>
+                                    <p>nguyenquangthanh0412@gmail.com</p>
+                                </div>
+                            </li>
+                            <li class="user__list-item">
+                                <img src="https://cdnimg.vietnamplus.vn/uploaded/bokttj/2022_03_10/aldrin_apollo.jpg" alt="">
+                                <div class="user__item-infomation">
+                                    <h2>Nguyễn Quang Thành</h2>
+                                    <p>nguyenquangthanh0412@gmail.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__infomation__product">
+                        <h1>Sản phẩm bán chạy</h1>
+                        <ul>
+                            <li>
+                                <h2>Bàn chơi game</h2>
+                                <div class="produce">
+                                    <p class="produce_id">
+                                        Mã SP: 0123456
+                                    </p>
+                                    <div class="produce_share">
+                                        <h6>70</h6>
+                                        <p>sales</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h2>Ghế công cơ học</h2>
+                                <div class="produce">
+                                    <p class="produce_id">
+                                        Mã SP: 0123456
+                                    </p>
+                                    <div class="produce_share">
+                                        <h6>70</h6>
+                                        <p>sales</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h2>Bàn phím cơ</h2>
+                                <div class="produce">
+                                    <p class="produce_id">
+                                        Mã SP: 0123456
+                                    </p>
+                                    <div class="produce_share">
+                                        <h6>70</h6>
+                                        <p>sales</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h2>Chuột không dây</h2>
+                                <div class="produce">
+                                    <p class="produce_id">
+                                        Mã SP: 0123456
+                                    </p>
+                                    <div class="produce_share">
+                                        <h6>70</h6>
+                                        <p>sales</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h2>Tai nghe không dây</h2>
+                                <div class="produce">
+                                    <p class="produce_id">
+                                        Mã SP: 0123456
+                                    </p>
+                                    <div class="produce_share">
+                                        <h6>70</h6>
+                                        <p>sales</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content__order">
+                    <h1>Đơn hàng gần nhất</h1>
+                    <p>Danh sách 6 đơn hàng gần nhất</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr class="background__table">
+                                <td>Khách hàng</td>
+                                <td>Thời gian</td>
+                                <td>Thành tiền</td>
+                                <td>Trạng thái</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td ><p class="label-success">Hoàn thành</p></td>
+                            </tr>
+                            <tr class="background__table">
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td><p class="label-primary">Đang giao</p></td>
+                            </tr>
+                            <tr>
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td><p class="label-danger">Đã hủy</p></td>
+                            </tr>
+                            <tr class="background__table">
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td><p class="label-success">Đã hủy</p></td>
+                            </tr>
+                            <tr>
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td><p class="label-danger">Đã hủy</p></td>
+                            </tr>
+                            <tr class="background__table">
+                                <td class="text_color">Nguyễn Văn A</td>
+                                <td>Jun 23 ,2022</td>
+                                <td class="text_color">2.300.000 VND</td>
+                                <td><p class="label-success">Đã hủy</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </table>
+                </div>
+
+                <footer class="content__footer">
+                    <a href="https://vnsolution.com.vn/">© 2022 VnSolution. All rights reserved.</a>
+                    <div class="content__footer__contact">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/?lang=vi"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
+
+    
 </body>
 </html>

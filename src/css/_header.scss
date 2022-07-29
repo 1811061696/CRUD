@@ -2,15 +2,20 @@
 @import 'colors';
 
 .header {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     max-width: 1600px;
     height: 70px;
+    background-color:$background-color;
     margin: auto;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     border: 1px solid $gray200;
-    margin-top: 10px;
 
 
     &__title{
@@ -21,7 +26,13 @@
         font-size: $text-xl1;
         line-height: 150%;
         color: $gray800;
+
+        &:hover {
+            cursor: pointer;
+        }
+        
     }
+
 
 
     &__information{
@@ -34,13 +45,27 @@
             padding: 4px;
             margin-right: 12px;
             font-size: 1.3rem;
+            transition: background 0.3s linear;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+            
         }
+
 
         img {
             width: 32px;
             height: 32px;
             border-radius: 50%;
             border: solid 1px $gray300;
+            transition: background 0.3 linear;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
         }
     }
 
