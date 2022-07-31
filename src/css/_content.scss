@@ -1,3 +1,5 @@
+@import 'media-queries';
+
 .content{
     background-color: #E5E5E5;
     flex: 1;
@@ -6,7 +8,6 @@
 
     &__turnover {
         width: 100%;
-        height: 50px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -42,6 +43,14 @@
         display: flex;
         margin-top: 16px;
 
+        @include tablet {
+            display: block;
+        }
+
+        @include mobile {
+            display: block;
+        }
+
         &__user{
             min-width: calc((100% / 12) * 4);
             margin-right: 16px;
@@ -50,6 +59,14 @@
             background: #FFFFFF;
             box-shadow: $box-shadow;
             border-radius: 16px;
+
+            @include tablet {
+                margin: 0 0 16px 0;
+            }
+
+            @include mobile {
+                margin: 0 0 16px 0;
+            }
 
             h1 {
                 font-style: normal;

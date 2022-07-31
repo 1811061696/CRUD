@@ -1,5 +1,7 @@
 @import 'text';
 @import 'colors';
+@import 'media-queries';
+
 
 .header {
     z-index: 9;
@@ -27,10 +29,32 @@
         line-height: 150%;
         color: $gray800;
 
+        
         &:hover {
             cursor: pointer;
         }
+
+        @include mobile {
+            display: none;
+        }
         
+    }
+
+
+    .menu_icon {
+        display: none;
+
+        @include mobile {
+            display:block;
+            font-size: 1.2rem;
+            color: $gray900;
+
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
     }
 
 
@@ -70,7 +94,6 @@
     }
 
 }
-
 
 
 
