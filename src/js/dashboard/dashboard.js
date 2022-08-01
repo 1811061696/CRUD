@@ -1,4 +1,4 @@
-import { newUser, product, dataTable } from "./data.js";
+import {menuItems, newUser, product, dataTable } from "./data.js";
 
 // click menuIcon(mobile)
 const meniIcon = document.querySelector(".menu_icon")
@@ -13,6 +13,19 @@ meniIcon.addEventListener("click", (e) => {
 })
 
 
+
+// hiển thị menuItem
+const menuListItem = document.querySelector(".navbar__list")
+menuItems.forEach((item) => {
+  menuListItem.innerHTML += `
+    <li class="navbar__list__item">
+          <i class="${item.class}"></i>
+          <a href="${item.path}" onclick="route()">
+              ${item.title}
+          </a>
+      </li>
+  `
+})
 
 
 

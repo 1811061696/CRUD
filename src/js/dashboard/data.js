@@ -3,14 +3,19 @@ const menuItems = [
     {
       class: "fa-solid fa-database",
       title: "Danh sách sản phẩm",
+      path: "/product"
     },
     {
       class: "fa-solid fa-user",
       title: "Khách hàng",
+      path: "/user"
+
     },
     {
       class: "fa-solid fa-file-lines",
       title: "Đơn hàng",
+      path: "/order"
+
     },
   ];
 
