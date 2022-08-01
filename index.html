@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
@@ -25,72 +26,43 @@
             <div class="navbar">
                 <div class="navbar__title ">
                     <i class="fas fa-solid fa-square-poll-vertical active "></i>
-                    <p class="active">Bảng điều khiển</p>
+                    <a href="/">
+                        <p class="active">Bảng điều khiển</p>
+                    </a>
                 </div>
                 <ul class="navbar__list">
-      
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-database"></i>
+                        <a href="/product" onclick="route()">
+                            Danh sách sản phẩm
+                        </a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-user"></i>
+                        <a href="/user" onclick="route()">
+                            Khách hàng
+                        </a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <a href="/order " onclick="route()">
+                            Đơn hàng
+                        </a>
+                    </li>
                 </ul>
-
-
                 <button class="navbar__btn">Thu gọn</button>
+
             </div>
+            
             <div class="content">
-                <div class="content__turnover">
-                    <div class="content__turnover_header">
-                        <h4>Doanh thu</h4>
-                        <img src="./src/image/waning.png" alt="">
-                    </div>
-                    <canvas id="myChart" style="max-height:500px; width: 100%;">
-                        
-                    </canvas>
-                </div>
-                <div class="content__infomation">
-                    <div class="content__infomation__user">
-                        <h1>Khách hàng mới</h1>
-                        <ul class="content__infomation__user__list">
-                            
-                        </ul>
-                    </div>
-                    <div class="content__infomation__product">
-                        <h1>Sản phẩm bán chạy</h1>
-                        <ul class="product__list">
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="content__order">
-                    <h1>Đơn hàng gần nhất</h1>
-                    <p>Danh sách 6 đơn hàng gần nhất</p>
-
-                    <table class="table">
-                        <thead>
-                            <tr class="background__table">
-                                <td>Khách hàng</td>
-                                <td>Thời gian</td>
-                                <td>Thành tiền</td>
-                                <td>Trạng thái</td>
-                            </tr>
-                        </thead>
-                        <tbody class="list__table">
-                            
-                        </tbody>
-                    </table>
-                    </table>
-                </div>
-
-                <footer class="content__footer">
-                    <a href="https://vnsolution.com.vn/">© 2022 VnSolution. All rights reserved.</a>
-                    <div class="content__footer__contact">
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/?lang=vi"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </footer>
+                <div class="dashboard-content" id="main-page">
+                  <!-- pages/.html -->
+                </div>    
             </div>
         </div>
     </div>
 
-    <script src="./src/js/dashboard/chart.js"></script>
+    <script src="./src/js/route.js"></script>
     <script type="module" src="./src/js/dashboard/dashboard.js"></script>
 </body>
 </html>

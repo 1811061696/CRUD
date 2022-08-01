@@ -118,6 +118,7 @@
   border-bottom: 1px solid #E5E7EB;
   background-color: #fff;
   position: relative;
+  min-height: 100vh;
 }
 @media only screen and (max-width: 46.1875em) {
   .navbar {
@@ -155,6 +156,9 @@
   align-items: center;
   border-bottom: 1px solid #E5E7EB;
   padding: 0 23.5px;
+}
+.navbar__title a {
+  text-decoration: none;
 }
 .navbar__title i {
   color: #000;
@@ -230,7 +234,7 @@
 }
 
 .content {
-  background-color: #E5E5E5;
+  background-color: #F3F4F6;
   flex: 1;
   padding: 16px;
 }

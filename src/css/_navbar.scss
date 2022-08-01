@@ -5,6 +5,7 @@
     border-bottom: 1px solid $gray200;
     background-color: #fff;
     position: relative;
+    min-height: 100vh;
 
 
     @include mobile {
@@ -35,6 +36,10 @@
         align-items: center;
         border-bottom: 1px solid $gray200;
         padding: 0 23.5px;
+
+        a{
+            text-decoration: none;
+        }
 
 
         i{
