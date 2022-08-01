@@ -480,6 +480,12 @@
   align-items: center;
   padding: 0 32px;
 }
+@media only screen and (max-width: 46.1875em) {
+  .content__footer {
+    display: block;
+    padding: 32px;
+  }
+}
 .content__footer a {
   text-decoration: none;
   font-style: normal;
@@ -488,10 +494,21 @@
   line-height: 150%;
   color: #6B7280;
 }
+@media only screen and (max-width: 46.1875em) {
+  .content__footer__contact {
+    margin-top: 18px;
+  }
+}
 .content__footer__contact a {
   padding: 4px;
   margin: 15px;
   color: #111827;
+}
+@media only screen and (max-width: 46.1875em) {
+  .content__footer__contact a {
+    margin-left: 0;
+    margin-right: 35px;
+  }
 }
 
 * {
