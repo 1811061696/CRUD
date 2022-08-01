@@ -36,6 +36,9 @@
                 height: 18px;
             }
         }
+
+
+       
     }
 
 
@@ -338,3 +341,18 @@
 
     
 }
+
+
+#chartjs-tooltip{
+    text-align: left;
+    background-color: $gray50;
+    box-sizing: border-box;
+    max-width: 194px;
+    height: 80px;
+    padding: 16px;
+    border-radius: 16px;
+    
+}
+
+
+

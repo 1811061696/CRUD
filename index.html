@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+
     <title>CURD</title>
 </head>
 <body>
@@ -39,7 +40,7 @@
                         <h4>Doanh thu</h4>
                         <img src="./src/image/waning.png" alt="">
                     </div>
-                    <canvas  id="chart" max-width="100%">
+                    <canvas id="myChart" style="max-height:500px; width: 100%;">
                         
                     </canvas>
                 </div>
@@ -89,7 +90,7 @@
         </div>
     </div>
 
-    
-    <script type="module" src="./src/js/dashboard.js"></script>
+    <script src="./src/js/dashboard/chart.js"></script>
+    <script type="module" src="./src/js/dashboard/dashboard.js"></script>
 </body>
 </html>
