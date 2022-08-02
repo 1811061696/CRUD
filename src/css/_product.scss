@@ -1,0 +1,255 @@
+.product{
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    border-radius: 16px;
+    padding: 0 16px;
+
+    &__title{
+        font-weight: $font-semibold;
+        font-size: $text-xl;
+        line-height: 150%;
+        color: $gray900;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        align-items: center;
+
+        .product__search{
+            position: relative;
+
+            .product_search_input{
+                width: 400px;
+                padding: 8px 12px;
+                border: 1px solid #D1D5DB;
+                border-radius: 4px;
+                background-color: $background-color;
+                outline: none;
+                color: $gray900;
+            }
+
+            .search__icon{
+                position: absolute;
+                font-size: 1.3rem;
+                top: 0;
+                right: 4px;
+                color: $gray600;
+                padding: 7px 6px ;
+
+                &:hover{
+                    cursor: pointer;
+                    color: $gray800;
+                }
+            }
+            
+        }
+
+
+        .product__event{
+
+            .Product__add{
+                font-style: normal;
+                width: 102px;
+                justify-content: center;
+                align-items: center;
+                padding: 7px;
+                background: $blue600;
+                border-radius: 8px;
+                font-weight: $font-medium;
+                font-size: $text-sm;
+                line-height: 150%;
+                outline: none;
+                border: none;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $blue700;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $blue100;
+
+                }
+            }
+
+
+            .Product__filter{
+                font-style: normal;
+                width: 76px;
+                justify-content: center;
+                align-items: center;
+                padding: 7px;
+                background: $background-color;
+                border-radius: 8px;
+                font-weight: $font-medium;
+                font-size: $text-sm;
+                line-height: 150%;
+                color: $blue600;
+                outline: none;
+                border: 1px solid $green50;
+
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $green50;
+                }
+            }
+
+            .back {
+                display: none;
+            }
+
+        }
+    }
+
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+
+        thead{
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr{
+                display: table-row;
+                vertical-align: inherit;
+
+                td{
+                    border-bottom: 2px solid #E5E7EB;
+                    padding: 8px;
+                    vertical-align: top;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 150%;
+                    color: #6B7280;
+                    text-transform: uppercase;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        tbody{
+            display: table-row-group;
+            vertical-align: middle;
+
+            tr{
+                display: table-row;
+                vertical-align: inherit;
+                background-color: #fff;
+
+                td{
+                    padding: 14px 8px;
+                    vertical-align: top;
+                    border-bottom: 1px solid #ddd;
+                    text-transform: unset;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $gray500;
+                }
+
+                .text_color{
+                    color: $gray900;
+                    font-weight: $font-semibold;
+                }
+
+                .fa-pencil{
+                    color: $blue700;
+                    padding: 0 8px;
+                    transition: background 0.3s linear;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $blue800;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .fa-trash-can{
+                    color: $red700;
+                    transition: background 0.3s linear;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $red800;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .product_paging{
+        display: flex;
+        padding: 0 0 18px 0;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        p{
+            font-style: normal;
+            font-weight: $font-normal;
+            font-size: $text-xs;
+            line-height: 166%;
+            color: $gray500;
+        }
+
+        .paging__select{
+            font-style: normal;
+            font-weight: $font-normal;
+            font-size: $text-xs;
+            line-height: 19px;
+            outline: none;
+            border: none;
+            transition: background 0.3s linear;
+            margin-left: 8px;
+
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+
+        }
+
+        .paging__directional{
+            margin-left: 42px;
+
+            button {
+                outline: none;
+                border: none;
+                background-color: $background-color;
+                transition: background 0.3s linear;
+                color: $gray500;
+
+
+
+                &:hover{
+                    transform: scale(1.2);
+                    cursor: pointer;
+                    color: $gray600;
+                }
+
+                i{
+                    padding: 8px;
+                    font-size: 1rem;
+                }
+
+                .fa-angle-right{
+                    margin:0 20px 0 30px;
+                }
+            }
+
+        }
+    }
+}

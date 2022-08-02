@@ -1,0 +1,38 @@
+.error_container{
+    background-color: #f9fafb;
+    text-align: center;
+    padding: 100px 0;
+
+
+    .error_content{
+
+        h1{
+            font-weight: $font-bold;
+            font-size: $text-3xl;
+            line-height: 130%;
+            color: $gray900;
+        }
+
+        p{
+            font-weight: $font-normal;
+            font-size: $text-sm;
+            line-height: 150%;
+            color: $gray500;
+            margin: 8px 0 10px 0;
+        }
+
+        button {
+            width: 89px;
+            height: 39px;
+            border-radius: 8px;
+            background-color: $green500;
+            padding: 9px 17px;
+            font-weight: $font-semibold;
+            font-size: $text-sm;
+            line-height: 150%;
+            color: $background-color;
+            outline: none;
+            border: none;
+        }
+    }
+}

@@ -1,17 +1,21 @@
 // data navbar
 const menuItems = [
     {
+      id: "product",
       class: "fa-solid fa-database",
       title: "Danh sách sản phẩm",
       path: "/product"
+
     },
     {
+      id: "user",
       class: "fa-solid fa-user",
       title: "Khách hàng",
       path: "/user"
 
     },
     {
+      id: "order",
       class: "fa-solid fa-file-lines",
       title: "Đơn hàng",
       path: "/order"

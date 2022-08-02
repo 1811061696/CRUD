@@ -15,17 +15,17 @@ meniIcon.addEventListener("click", (e) => {
 
 
 // hiển thị menuItem
-const menuListItem = document.querySelector(".navbar__list")
-menuItems.forEach((item) => {
-  menuListItem.innerHTML += `
-    <li class="navbar__list__item">
-          <i class="${item.class}"></i>
-          <a href="${item.path}" onclick="route()">
-              ${item.title}
-          </a>
-      </li>
-  `
-})
+// const menuListItem = document.querySelector(".navbar__list")
+// menuItems.forEach((item) => {
+//   menuListItem.innerHTML += `
+//     <li  class="navbar__list__item">
+//           <i class="${item.class}"></i>
+//           <a id="${item.id}" href="${item.path}" onclick="route()">
+//               ${item.title}
+//           </a>
+//       </li>
+//   `
+// })
 
 
 
@@ -47,7 +47,6 @@ newUser.forEach((item) => {
 
 
 // render product
-
 const productList= document.querySelector(".product__list")
 product.forEach((item) => {
   productList.innerHTML += `

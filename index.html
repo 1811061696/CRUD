@@ -24,14 +24,31 @@
         </header>
         <div class="container">
             <div class="navbar">
-                <div class="navbar__title ">
-                    <i class="fas fa-solid fa-square-poll-vertical active "></i>
-                    <a href="/">
-                        <p class="active">Bảng điều khiển</p>
+                <div class="navbar__title " >
+                    <i class="fas fa-solid fa-square-poll-vertical  "></i>
+                    <a href="/" id="main"  >
+                        Bảng điều khiển
                     </a>
                 </div>
                 <ul class="navbar__list">
-                   
+                    <li  class="navbar__list__item">
+                        <i class="fa-solid fa-database"></i>
+                        <a id="product" href="/product" onclick="route()">
+                            Danh sách sản phẩm
+                        </a>
+                    </li>
+                    <li  class="navbar__list__item">
+                        <i class="fa-solid fa-user"></i>
+                        <a id="user" href="/user" onclick="route()">
+                            Khách hàng
+                        </a>
+                    </li>
+                    <li  class="navbar__list__item">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <a id="order" href="/order" onclick="route()">
+                            Đơn hàng
+                        </a>
+                    </li>
                 </ul>
                 <button class="navbar__btn">Thu gọn</button>
 
@@ -45,7 +62,7 @@
         </div>
     </div>
 
-    <script src="./src/js/route.js"></script>
+    <script type="module" src="./src/js/route.js"></script>
     <script type="module" src="./src/js/dashboard/dashboard.js"></script>
 </body>
 </html>
