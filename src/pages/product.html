@@ -1,171 +1,206 @@
 <div class="product">
-    <h1 class="product__title">Danh sách sản phẩm</h1>
-    <div class="product__header">
-        <div class="product__search">
-            <input class="product_search_input" type="text" placeholder="Tìm kiếm...">
-            <i  class="fa-solid fa-magnifying-glass search__icon"></i>
-        </div>
-        <div class="product__event">
-            <button  class="Product__add"><a href="/addProduct" onclick="route()">Thêm mới</a></button>
-            <button class="Product__filter">Bộ lọc</button>
-            <button class="Product__filter back">Quay lại</button>
-        </div>
+  <h1 class="product__title">Danh sách sản phẩm</h1>
+  <div class="product__header">
+    <div class="product__search">
+      <input
+        class="product_search_input"
+        type="text"
+        placeholder="Tìm kiếm..."
+      />
+      <i class="fa-solid fa-magnifying-glass search__icon"></i>
+    </div>
+    <div class="product__event">
+      <button class="Product__add">
+        <a href="/addProduct" onclick="route()">Thêm mới</a>
+      </button>
+      <button class="Product__filter">Bộ lọc</button>
+      <button class="back display">Ẩn bộ lọc</button>
+    </div>
+  </div>
+
+  <div class="filter">
+    <div class="information_group">
+      <div class="information">
+        <input type="text" placeholder="" id="name" />
+        <label for="name">Sản phẩm</label>
+      </div>
+      <div class="information">
+        <input type="number" id="amount" min="0" placeholder=" " />
+        <label for="amount">Số lượng</label>
+      </div>
     </div>
 
-
-    <table class="table">
-        <thead>
-            <tr class="background__table">
-                <td>Sản phẩm</td>
-                <td>Loại</td>
-                <td>Ngày tạo sản phẩm</td>
-                <td>Số lượng</td>
-                <td>Giá bán</td>
-                <td>Trạng thái</td>
-                <td>Chức năng</td>
-            </tr>
-        </thead>
-        <tbody class="list__table">
-            <tr>
-                <td class="text_color">Chuột máy tính</td>
-                <td class="text_color">Chuột</td>
-                <td >Jun 23, 2022</td>
-                <td class="text_color">100 cái</td>
-                <td class="text_color">2.300.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr class="background__table">
-                <td class="text_color">Bàn làm việc</td>
-                <td class="text_color">Bàn</td>
-                <td >Jun 24, 2022</td>
-                <td class="text_color">50 cái</td>
-                <td class="text_color">6.700.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="text_color">Ghế công thái học</td>
-                <td class="text_color">Ghế</td>
-                <td >Jun 25, 2022</td>
-                <td class="text_color">0 cái</td>
-                <td class="text_color">4.300.000 VND</td>
-                <td> <p class="label-danger">Hết hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-
-            <tr class="background__table">
-                <td class="text_color">Tay cầm chơi game</td>
-                <td class="text_color">Đồ gameing</td>
-                <td >Jun 26, 2022</td>
-                <td class="text_color">0 cái</td>
-                <td class="text_color">2.000.000 VND</td>
-                <td> <p class="label-danger">Hết hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr >
-                <td class="text_color">Chuột gameing</td>
-                <td class="text_color">Đồ gameing</td>
-                <td >Jun 27, 2022</td>
-                <td class="text_color">0 cái</td>
-                <td class="text_color">1.000.000 VND</td>
-                <td> <p class="label-danger">Hết hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr class="background__table">
-                <td class="text_color">Tai nghe không dây</td>
-                <td class="text_color">Tai nghe</td>
-                <td >Jun 28, 2022</td>
-                <td class="text_color">80 cái</td>
-                <td class="text_color">1.000.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr >
-                <td class="text_color">Bàn phím cơ</td>
-                <td class="text_color">Bàn phím</td>
-                <td >Jun 30, 2022</td>
-                <td class="text_color">50 cái</td>
-                <td class="text_color">1.500.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr class="background__table">
-                <td class="text_color">Lót chuột gameing</td>
-                <td class="text_color">Lót chuột</td>
-                <td >Jun 29, 2022</td>
-                <td class="text_color">100 cái</td>
-                <td class="text_color">500.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-            <tr >
-                <td class="text_color">Giá đỡ máy tính</td>
-                <td class="text_color">Phụ kiện máy tính</td>
-                <td >Jun 29, 2022</td>
-                <td class="text_color">200 cái</td>
-                <td class="text_color">800.000 VND</td>
-                <td> <p class="label-success">Còn hàng</p></td>
-                <td class="table__option">
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="product_paging">
-        <p>số bản ghi</p>
+    <div class="information_group">
+      <div class="information">
         <select aria-label="State" class="paging__select">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-            <option value="7">15</option>
-            <option value="8">20</option>
+          <option value="" selected disabled></option>
+          <option value="Chuột">Chuột</option>
+          <option value="Bàn">Bàn</option>
+          <option value="Ghế">Ghế</option>
+          <option value="Đồ gameing">Đồ gameing</option>
+          <option value="Tai nghe">Tai nghe</option>
+          <option value="Bàn phím">Bàn phím</option>
+          <option value="Lót chuột">Lót chuột</option>
         </select>
-        <div class="paging__directional">
-            <button aria-label="name">
-                <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button aria-label="name">
-                <i class="fa-solid fa-angle-right"></i>
-            </button>
-        </div>
+        <i class="fa-solid fa-caret-down"></i>
+        <label for="">Loại sản phẩm</label>
+      </div>
+      <div class="information">
+        <select aria-label="State" class="paging__select">
+          <option value="" selected disabled></option>
+          <option value="Còn hàng">
+            <p class="label-success">Còn hàng</p>
+          </option>
+          <option value="Hết hàng">Hết hàng</option>
+        </select>
+        <i class="fa-solid fa-caret-down"></i>
+        <label for="">Trạng thái</label>
+      </div>
     </div>
+  </div>
 
+  <table class="table">
+    <thead>
+      <tr class="background__table">
+        <td>Sản phẩm</td>
+        <td>Loại</td>
+        <td>Ngày tạo sản phẩm</td>
+        <td>Số lượng</td>
+        <td>Giá bán</td>
+        <td>Trạng thái</td>
+        <td>Chức năng</td>
+      </tr>
+    </thead>
+    <tbody class="list__table">
+      <tr>
+        <td class="text_color">Chuột máy tính</td>
+        <td class="text_color">Chuột</td>
+        <td>Jun 23, 2022</td>
+        <td class="text_color">100 cái</td>
+        <td class="text_color">2.300.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <a href="/updateProduct" onclick="route()"
+            ><i class="fa-solid fa-pencil"></i
+          ></a>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr class="background__table">
+        <td class="text_color">Bàn làm việc</td>
+        <td class="text_color">Bàn</td>
+        <td>Jun 24, 2022</td>
+        <td class="text_color">50 cái</td>
+        <td class="text_color">6.700.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr>
+        <td class="text_color">Ghế công thái học</td>
+        <td class="text_color">Ghế</td>
+        <td>Jun 25, 2022</td>
+        <td class="text_color">0 cái</td>
+        <td class="text_color">4.300.000 VND</td>
+        <td><p class="label-danger">Hết hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+
+      <tr class="background__table">
+        <td class="text_color">Tay cầm chơi game</td>
+        <td class="text_color">Đồ gameing</td>
+        <td>Jun 26, 2022</td>
+        <td class="text_color">0 cái</td>
+        <td class="text_color">2.000.000 VND</td>
+        <td><p class="label-danger">Hết hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr>
+        <td class="text_color">Chuột gameing</td>
+        <td class="text_color">Đồ gameing</td>
+        <td>Jun 27, 2022</td>
+        <td class="text_color">0 cái</td>
+        <td class="text_color">1.000.000 VND</td>
+        <td><p class="label-danger">Hết hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr class="background__table">
+        <td class="text_color">Tai nghe không dây</td>
+        <td class="text_color">Tai nghe</td>
+        <td>Jun 28, 2022</td>
+        <td class="text_color">80 cái</td>
+        <td class="text_color">1.000.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr>
+        <td class="text_color">Bàn phím cơ</td>
+        <td class="text_color">Bàn phím</td>
+        <td>Jun 30, 2022</td>
+        <td class="text_color">50 cái</td>
+        <td class="text_color">1.500.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr class="background__table">
+        <td class="text_color">Lót chuột gameing</td>
+        <td class="text_color">Lót chuột</td>
+        <td>Jun 29, 2022</td>
+        <td class="text_color">100 cái</td>
+        <td class="text_color">500.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+      <tr>
+        <td class="text_color">Giá đỡ máy tính</td>
+        <td class="text_color">Phụ kiện máy tính</td>
+        <td>Jun 29, 2022</td>
+        <td class="text_color">200 cái</td>
+        <td class="text_color">800.000 VND</td>
+        <td><p class="label-success">Còn hàng</p></td>
+        <td class="table__option">
+          <i class="fa-solid fa-pencil"></i>
+          <i class="fa-solid fa-trash-can"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="product_paging">
+    <p>số bản ghi</p>
+    <select aria-label="State" class="paging__select">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="7">15</option>
+      <option value="8">20</option>
+    </select>
+    <div class="paging__directional">
+      <button aria-label="name">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <button aria-label="name">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
 </div>
-
-
-
-
-<footer class="content__footer">
-    <a href="https://vnsolution.com.vn/">© 2022 VnSolution. All rights reserved.</a>
-    <div class="content__footer__contact">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://twitter.com/?lang=vi"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-    </div>
-</footer>

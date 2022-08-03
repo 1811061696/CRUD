@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./src/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 
     <title>CURD</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <header class="header">
-            <div class="header__title">CRUD</div>
-            
-            <i class="fas fa-solid fa-bars-staggered menu_icon"></i>
-            <div class="header__information">
-                <i class="fa-solid fa-bell"></i>
-                <img src="https://png.pngtree.com/png-vector/20201009/ourlarge/pngtree-svg-cartoon-cute-pair-of-owls-png-image_2355184.jpg" alt="">
-            </div>
-        </header>
-        <div class="container">
-            <div class="navbar">
-                <div class="navbar__title " >
-                    <i class="fas fa-solid fa-square-poll-vertical  "></i>
-                    <a href="/" id="main"  >
-                        Bảng điều khiển
-                    </a>
-                </div>
-                <ul class="navbar__list">
-                    <li  class="navbar__list__item">
-                        <i class="fa-solid fa-database"></i>
-                        <a id="product" href="/product" onclick="route()">
-                            Danh sách sản phẩm
-                        </a>
-                    </li>
-                    <li  class="navbar__list__item">
-                        <i class="fa-solid fa-user"></i>
-                        <a id="user" href="/user" onclick="route()">
-                            Khách hàng
-                        </a>
-                    </li>
-                    <li  class="navbar__list__item">
-                        <i class="fa-solid fa-file-lines"></i>
-                        <a id="order" href="/order" onclick="route()">
-                            Đơn hàng
-                        </a>
-                    </li>
-                </ul>
-                <button class="navbar__btn">Thu gọn</button>
+      <header class="header">
+        <div class="header__title">CRUD</div>
 
-            </div>
-            
-            <div class="content">
-                <div class="dashboard-content" id="main-page">
-                  <!-- pages/.html -->
-                </div>    
-            </div>
+        <i class="fas fa-solid fa-bars-staggered menu_icon"></i>
+        <div class="header__information">
+          <i class="fa-solid fa-bell"></i>
+          <img
+            src="https://png.pngtree.com/png-vector/20201009/ourlarge/pngtree-svg-cartoon-cute-pair-of-owls-png-image_2355184.jpg"
+            alt=""
+          />
         </div>
+      </header>
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar__title">
+            <i class="fas fa-solid fa-square-poll-vertical"></i>
+            <a href="/" id="main"> Bảng điều khiển </a>
+          </div>
+          <ul class="navbar__list">
+            <li class="navbar__list__item">
+              <i class="fa-solid fa-database"></i>
+              <a id="product" href="/product" onclick="route()">
+                Danh sách sản phẩm
+              </a>
+            </li>
+            <li class="navbar__list__item">
+              <i class="fa-solid fa-user"></i>
+              <a id="user" href="/user" onclick="route()"> Khách hàng </a>
+            </li>
+            <li class="navbar__list__item">
+              <i class="fa-solid fa-file-lines"></i>
+              <a id="order" href="/order" onclick="route()"> Đơn hàng </a>
+            </li>
+          </ul>
+          <button class="navbar__btn">Thu gọn</button>
+        </div>
+
+        <div class="content">
+          <div class="dashboard-content" id="main-page">
+            <!-- pages/.html -->
+          </div>
+
+
+          <footer class="content__footer">
+            <a href="https://vnsolution.com.vn/"
+              >© 2022 VnSolution. All rights reserved.</a
+            >
+            <div class="content__footer__contact">
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com/?lang=vi"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </footer>
+          
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/js/route.js"></script>
     <script type="module" src="./src/js/dashboard/dashboard.js"></script>
-</body>
+  </body>
 </html>

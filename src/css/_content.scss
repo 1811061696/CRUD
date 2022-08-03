@@ -335,6 +335,15 @@
                     margin-left: 0;
                     margin-right: 35px;
                 }
+
+                i{
+                    transition: background 0.3s linear;
+
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.4);
+                    }
+                }
             }
         }
     }
