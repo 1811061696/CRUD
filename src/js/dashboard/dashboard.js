@@ -1,4 +1,4 @@
-import { menuItems, newUser, product, dataTable } from "./data.js";
+import { menuItems, newUser, productSelling, dataTable } from "./data.js";
 
 // click menuIcon(mobile)
 const meniIcon = document.querySelector(".menu_icon");
@@ -40,7 +40,7 @@ newUser.forEach((item) => {
 
 // render product
 const productList = document.querySelector(".product__list");
-product.forEach((item) => {
+productSelling.forEach((item) => {
   productList.innerHTML += `
       <li>
         <h2>${item.productName}</h2>
@@ -69,6 +69,7 @@ dataTable.forEach((item) => {
     </tr>
   `;
 });
+
 
 const LABELS = [
   "01 June",
@@ -136,7 +137,6 @@ const config = {
         // Disable the on-canvas tooltip
         enabled: false,
         external: function (context) {
-          console.log(context);
           // Tooltip Element
           let tooltipEl = document.getElementById("chartjs-tooltip");
 
@@ -203,7 +203,6 @@ const config = {
 
           const position = context.chart.canvas.getBoundingClientRect();
           const bodyFont = Chart.helpers.toFont(tooltipModel.options.bodyFont);
-          console.log(tooltipEl);
           // Display, position, and set styles for font
           tooltipEl.style.opacity = 1;
           tooltipEl.style.position = "absolute";
@@ -213,8 +212,6 @@ const config = {
             window.pageXOffset +
             tooltipModel.caretX +
             "px";
-          console.log(tooltipEl.style.left);
-          console.log(position.left);
           tooltipEl.style.top =
             position.top -
             130 +

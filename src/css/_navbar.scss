@@ -40,6 +40,8 @@
         a{
             text-decoration: none;
             color: $gray900;
+            outline: none;
+            border: none;
         }
 
 
@@ -96,6 +98,8 @@
                 color: $gray900;
                 transition: background 0.3s linear;
                 -webkit-tap-highlight-color: transparent;
+                outline: none;
+                border: none;
 
 
                 &:hover {

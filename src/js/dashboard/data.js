@@ -89,7 +89,7 @@ const newUser = [
 
 
 // data product
-const product = [
+const productSelling = [
     {
         productName: "Bàn chơi game",
         productId: "Mã SP: 00001",
@@ -215,12 +215,103 @@ const dataTable = [
 ] 
 
 
+// product
+const PRODUCT = [
+    {
+        name: "Chuột máy tính",
+        type: "Chuột",
+        create_date: "jun 23, 2022",
+        amount: "100 cái",
+        price: '2.300.000',
+        status: "còn hàng",
+        Class: "label-success",
+    },
+    {
+        name: "Bàn làm việc",
+        type: "Bàn",
+        create_date: "jun 23, 2022",
+        amount: "100 cái",
+        price: '6.700.000',
+        status: "còn hàng",
+        Class: "label-success",
+        background: "background__table"
+    },
+    {
+        name: "Ghế công thái học",
+        type: "Ghế",
+        create_date: "jun 18, 2022",
+        amount: "0 cái",
+        price: '5.000.000',
+        status: "hết hàng",
+        Class: "label-danger",
+    },
+    {
+        name: "Chuột gameing",
+        type: "Chuột",
+        create_date: "jun 15, 2022",
+        amount: "0 cái",
+        price: '2.300.000',
+        status: "hết hàng",
+        Class: "label-danger",
+        background: "background__table"
+    },
+    {
+        name: "Tai nghe không dây",
+        type: "Tai nghe",
+        create_date: "jun 11, 2022",
+        amount: "100 cái",
+        price: '2.800.000',
+        status: "Còn hàng",
+        Class: "label-success",
+    },
+    {
+        name: "Bàn phím cơ",
+        type: "Bàn phím",
+        create_date: "jun 11, 2022",
+        amount: "100 cái",
+        price: '2.300.000',
+        status: "Còn hàng",
+        Class: "label-success",
+        background: "background__table"
+    },
+    {
+        name: "Bàn phím văn phòng",
+        type: "Bàn phím",
+        create_date: "jun 11, 2022",
+        amount: "100 cái",
+        price: '2.300.000',
+        status: "Còn hàng",
+        Class: "label-success",
+    },
+    {
+        name: "Lót chuột",
+        type: "Lót chuột",
+        create_date: "jun 11, 2022",
+        amount: "80 cái",
+        price: '2.300.000',
+        status: "Còn hàng",
+        Class: "label-success",
+        background: "background__table"
+    },
+    {
+        name: "Giá đỡ laptop",
+        type: "Phụ kiện laptop",
+        create_date: "jun 11, 2022",
+        amount: "40 cái",
+        price: '2.300.000',
+        status: "Còn hàng",
+        Class: "label-success",
+    },
+]
+
+
 
   export{
     menuItems,
     chartData,
     chartLabels,
     newUser,
-    product,
-    dataTable
+    productSelling,
+    dataTable,
+    PRODUCT
   }

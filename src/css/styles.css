@@ -160,6 +160,8 @@
 .navbar__title a {
   text-decoration: none;
   color: #111827;
+  outline: none;
+  border: none;
 }
 .navbar__title i {
   color: #000;
@@ -204,6 +206,8 @@
   color: #111827;
   transition: background 0.3s linear;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
 }
 .navbar__list__item a:hover {
   cursor: pointer;
