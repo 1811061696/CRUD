@@ -91,6 +91,27 @@
           border: none;
           outline: none;
           border-radius: 10px;
+
+          &:focus {
+            border: 1px solid $green400;
+
+            &:focus + label {
+              color: $green400;
+              position: absolute;
+              left: 18px;
+              top: 0;
+              transform: translateY(-50%);
+              background-color: white;
+              transition: 0.1s ease-out;
+              transform-origin: left top;
+              pointer-events: none;
+              font-style: normal;
+              font-weight: $font-normal;
+              font-size: $text-xs;
+              line-height: 12px;
+              letter-spacing: 0.15px;
+            }
+          }
         }
 
         i {
@@ -107,10 +128,8 @@
 
         label {
           position: absolute;
-          font-size: 1rem;
           left: 18px;
-          top: 0;
-          transform: translateY(-50%);
+          top: 16px;
           background-color: white;
           color: $gray500;
           transition: 0.1s ease-out;
@@ -118,7 +137,7 @@
           pointer-events: none;
           font-style: normal;
           font-weight: $font-normal;
-          font-size: $text-xs;
+          font-size: $text-sm;
           line-height: 12px;
           letter-spacing: 0.15px;
         }
@@ -151,9 +170,36 @@
           right: 10px;
           width: 19px;
           height: 19px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .label_select {
+          color: $gray500;
+          position: absolute;
+          left: 18px;
+          top: 0;
+          transform: translateY(-50%);
+          background-color: white;
+          transition: 0.1s ease-out;
+          transform-origin: left top;
+          pointer-events: none;
+          font-style: normal;
+          font-weight: $font-normal;
+          font-size: $text-xs;
+          line-height: 12px;
+          letter-spacing: 0.15px;
         }
       }
     }
   }
+}
+
+input:focus + label,
+input.is-valid + label {
+  transform: translateY(-180%);
+  font-size: $text-xs !important;
 }
 

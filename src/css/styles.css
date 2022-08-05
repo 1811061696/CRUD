@@ -46,7 +46,7 @@
   right: 0;
   left: 0;
   display: flex;
-  max-width: 1600px;
+  width: 100%;
   height: 70px;
   background-color: #fff;
   margin: auto;
@@ -966,6 +966,27 @@
   outline: none;
   border-radius: 10px;
 }
+.product_form_add .add_information .information_group .information select:focus,
+.product_form_add .add_information .information_group .information input:focus {
+  border: 1px solid #31c48d;
+}
+.product_form_add .add_information .information_group .information select:focus:focus + label,
+.product_form_add .add_information .information_group .information input:focus:focus + label {
+  color: #31c48d;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.15px;
+}
 .product_form_add .add_information .information_group .information i {
   position: absolute;
   top: 14px;
@@ -978,10 +999,8 @@
 }
 .product_form_add .add_information .information_group .information label {
   position: absolute;
-  font-size: 1rem;
   left: 18px;
-  top: 0;
-  transform: translateY(-50%);
+  top: 16px;
   background-color: white;
   color: #6b7280;
   transition: 0.1s ease-out;
@@ -989,7 +1008,7 @@
   pointer-events: none;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
   letter-spacing: 0.15px;
 }
@@ -1019,6 +1038,31 @@
   width: 19px;
   height: 19px;
 }
+.product_form_add .add_information .information_group .information input[type=date]::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
+}
+.product_form_add .add_information .information_group .information .label_select {
+  color: #6b7280;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: white;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.15px;
+}
+
+input:focus + label,
+input.is-valid + label {
+  transform: translateY(-180%);
+  font-size: 12px !important;
+}
 
 * {
   box-sizing: border-box;
@@ -1031,4 +1075,8 @@
   display: flex;
   margin-top: 70px;
   background-color: #fff;
+}
+
+.dashboard-content {
+  min-height: 65vh;
 }/*# sourceMappingURL=styles.css.map */

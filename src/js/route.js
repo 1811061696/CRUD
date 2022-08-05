@@ -7,7 +7,7 @@ const iconList = document.querySelector(".fa-database")
 const iconUser = document.querySelector(".fa-user")
 const iconOrder = document.querySelector(".fa-file-lines")
 
-export const route = (event) => {
+const route = (event) => {
     event = event || window.event;
     event.preventDefault();
     window.history.pushState({}, "", event.target.href);
@@ -33,6 +33,10 @@ const handleLocation = async () => {
             iconMain.classList.add("active")
             break;
         case "product":
+            product.classList.add("active")
+            iconList.classList.add("active")
+            break;
+        case "addProduct":
             product.classList.add("active")
             iconList.classList.add("active")
             break;
