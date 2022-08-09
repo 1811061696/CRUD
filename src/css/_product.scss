@@ -3,6 +3,7 @@
   box-shadow: $box-shadow;
   border-radius: 16px;
   padding: 0 16px;
+  min-height: 65vh;
 
   &__title {
     font-weight: $font-semibold;

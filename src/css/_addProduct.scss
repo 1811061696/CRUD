@@ -203,3 +203,22 @@ input.is-valid + label {
   font-size: $text-xs !important;
 }
 
+.invalid{
+  border: 1px solid $red600 !important;
+}
+
+.form-message {
+  position: absolute;
+  left: 12px;
+  bottom: -13px;
+  background-color: white;
+  color: $red600;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  font-style: normal;
+  font-weight: $font-normal;
+  font-size: $text-xs;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+}

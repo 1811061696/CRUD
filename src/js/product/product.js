@@ -19,7 +19,6 @@ function getProuct(callback) {
     .then(callback);
 }
 
-
 // phương thức xóa
 function handleDeleteProduct(id) {
   const option = {
@@ -39,14 +38,70 @@ function handleDeleteProduct(id) {
     });
 }
 
-
 // render product
 function renderProduct(products) {
+  // phân trang
+  var numberPage = document.querySelector("#numberPage");
+  var currentPage = 1; // trang ban đầu
+  let perPage = Number(numberPage.value); //  số item trong 1 trang
+  let totalPage = 0; // tổng số trang
+  let perProduct = []; // mảng chứa các item được render
+
+  // lấy các giá trị được render ra trong một tráng
+  perProduct = products.slice(
+    (currentPage - 1) * perPage,
+    (currentPage - 1) * perPage + perPage
+  );
+
+  // render số item theo mong muốn
+  numberPage.onchange = () => {
+    perPage = numberPage.value;
+    getProuct(renderProduct);
+  };
+
+  totalPage = products.length / perPage;
+  console.log(totalPage)
+
+  // sử lý next right
+  const nextRight = document.getElementById("next-right");
+  nextRight.addEventListener("click", () => {
+    if (currentPage === Math.ceil(totalPage)) {
+      nextRight.removeEventListener("click");
+    } else {
+      currentPage += 1;
+      perProduct = products.slice(
+        (currentPage - 1) * perPage,
+        (currentPage - 1) * perPage + perPage
+      );
+      render();
+    }
+  });
+
+ 
+
+  // sử lý next left
+  const nextLeft = document.getElementById("next-left");
+  nextLeft.addEventListener("click", () => {
+    if (currentPage !== 1) {
+      currentPage -= 1;
+      console.log(currentPage);
+      perProduct = products.slice(
+        (currentPage - 1) * perPage,
+        (currentPage - 1) * perPage + perPage
+      );
+      render();
+    } else {
+      nextLeft.removeEventListener("click");
+    }
+  });
+
+  // render product ra UI
   const productTable = document.querySelector(".table_list");
-  var html = products.map(function (item, index) {
-    if (index % 2 === 0) {
-      if (item.status === "Còn hàng") {
-        return `
+  function render() {
+    var html = perProduct.map(function (item, index) {
+      if (index % 2 === 0) {
+        if (item.status === "Còn hàng") {
+          return `
         <tr class="">
             <td class="text_color">${item.name}</td>
             <td class="text_color">${item.type}</td>
@@ -60,8 +115,8 @@ function renderProduct(products) {
             </td>
           </tr>
         `;
-      } else {
-        return `
+        } else {
+          return `
         <tr class="">
             <td class="text_color">${item.name}</td>
             <td class="text_color">${item.type}</td>
@@ -75,10 +130,10 @@ function renderProduct(products) {
             </td>
           </tr>
         `;
-      }
-    } else {
-      if (item.status === "Còn hàng") {
-        return `
+        }
+      } else {
+        if (item.status === "Còn hàng") {
+          return `
         <tr class="background__table">
             <td class="text_color">${item.name}</td>
             <td class="text_color">${item.type}</td>
@@ -92,8 +147,8 @@ function renderProduct(products) {
             </td>
           </tr>
         `;
-      } else {
-        return `
+        } else {
+          return `
         <tr class="background__table">
             <td class="text_color">${item.name}</td>
             <td class="text_color">${item.type}</td>
@@ -107,9 +162,10 @@ function renderProduct(products) {
             </td>
           </tr>
         `;
+        }
       }
-    }
-  });
-
-  productTable.innerHTML = html.join("");
+    });
+    productTable.innerHTML = html.join("");
+  }
+  render();
 }

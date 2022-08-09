@@ -1,62 +1,67 @@
 <div class="product_form_add">
-    <div class="form_add_header">
-      <h1>Cập nhập sản phẩm</h1>
-      <div class="add_option">
-        <button class="save">Lưu lại</button>
-        <button class="back">
-          <a href="#product" onclick="route()">Quay lại</a>
-        </button>
+  <div class="form_add_header">
+    <h1>Cập nhập sản phẩm</h1>
+    <div class="add_option">
+      <button class="save">Lưu lại</button>
+      <button class="back">
+        <a href="#product" onclick="route()">Quay lại</a>
+      </button>
+    </div>
+  </div>
+
+  <div class="add_information">
+    <div class="information_group">
+      <div class="information">
+        <input type="text" placeholder="" id="name" />
+        <label for="name">Sản phẩm</label>
+        <span class="form-message"></span>
+      </div>
+      <div class="information">
+        <input type="number" id="amount" min="0" placeholder=" " />
+        <label for="amount">Số lượng</label>
+        <span class="form-message"></span>
       </div>
     </div>
-  
-    <div class="add_information">
-      <div class="information_group">
-        <div class="information">
-          <input type="text" placeholder="" id="name" />
-          <label for="name">Sản phẩm</label>
-        </div>
-        <div class="information">
-          <input type="number" id="amount" min="0" placeholder=" " />
-          <label for="amount">Số lượng</label>
-        </div>
+
+    <div class="information_group">
+      <div class="information">
+        <select aria-label="State" class="paging__select" id="type">
+          <option value="" selected disabled></option>
+          <option value="Chuột">Chuột</option>
+          <option value="Bàn">Bàn</option>
+          <option value="Ghế">Ghế</option>
+          <option value="Đồ gameing">Đồ gameing</option>
+          <option value="Tai nghe">Tai nghe</option>
+          <option value="Bàn phím">Bàn phím</option>
+          <option value="Lót chuột">Lót chuột</option>
+        </select>
+        <i class="fa-solid fa-caret-down"></i>
+        <label class="label_select" for="type">Loại sản phẩm</label>
+        <span class="form-message"></span>
       </div>
-  
-      <div class="information_group">
-        <div class="information">
-          <select aria-label="State" class="paging__select">
-            <option value="" selected disabled></option>
-            <option value="Chuột">Chuột</option>
-            <option value="Bàn">Bàn</option>
-            <option value="Ghế">Ghế</option>
-            <option value="Đồ gameing">Đồ gameing</option>
-            <option value="Tai nghe">Tai nghe</option>
-            <option value="Bàn phím">Bàn phím</option>
-            <option value="Lót chuột">Lót chuột</option>
-          </select>
-          <i class="fa-solid fa-caret-down"></i>
-          <label for="">Loại sản phẩm</label>
-        </div>
-        <div class="information">
-          <select aria-label="State" class="paging__select">
-            <option value="" selected disabled></option>
-            <option value="Còn hàng">Còn Hàng</option>
-            <option  value="Hết hàng">Hết hàng</option>
-          </select>
-          <i class="fa-solid fa-caret-down"></i>
-          <label for="">Trạng thái</label>
-        </div>
+      <div class="information">
+        <select aria-label="State" class="paging__select" id="status">
+          <option value="" selected disabled></option>
+          <option value="Còn hàng">Còn Hàng</option>
+          <option value="Hết hàng">Hết hàng</option>
+        </select>
+        <i class="fa-solid fa-caret-down"></i>
+        <label class="label_select" for="">Trạng thái</label>
+        <span class="form-message"></span>
       </div>
-  
-      <div class="information_group">
-        <div class="information">
-          <input type="date" placeholder="date" id="date" />
-          <label for="date">Ngày tạo</label>
-        </div>
-        <div class="information">
-          <input type="text" placeholder="VND" id="price" />
-          <label for="price">Giá bán</label>
-        </div>
+    </div>
+
+    <div class="information_group">
+      <div class="information">
+        <input type="date" placeholder="" id="date" max="2030-12-31" />
+        <label class="label_select" for="date">Ngày tạo</label>
+        <span class="form-message"></span>
+      </div>
+      <div class="information">
+        <input type="number" placeholder="" id="price" />
+        <label for="price">Giá bán</label>
+        <span class="form-message"></span>
       </div>
     </div>
   </div>
-  
+</div>
