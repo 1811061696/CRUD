@@ -1,4 +1,4 @@
-var saveBtn = document.querySelector(".save");
+var saveBtn = document.getElementById("saves");
 
 // API
 var productApi = "http://localhost:3000/product";
@@ -221,7 +221,7 @@ function handleCreateProduct() {
     price = price.toLocaleString("vi", { style: "currency", currency: "VND" }); // định dạng giá theo kiểu VND
 
     // kiểm tra thông tin truyền đi
-    if (
+      if (
       name === "" ||
       amount === "" ||
       type === "" ||
@@ -263,8 +263,8 @@ function handleCreateProduct() {
         create_date: time,
         price: price,
       };
-
       createProduct(formData);
+      alert("Thêm thành công")
     }
   };
 }

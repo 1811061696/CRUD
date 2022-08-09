@@ -6,9 +6,11 @@ function start() {
   getProuct(function (product) {
     renderProduct(product);
   });
+  
 }
 
 start();
+
 
 // lấy dữ liệu từ API
 function getProuct(callback) {
@@ -19,8 +21,17 @@ function getProuct(callback) {
     .then(callback);
 }
 
+
+// lấy id của product muốn sửa 
+function addIdLocalStorage(id){
+  localStorage.setItem("Id", id)
+}
+var idEdit = localStorage.getItem("Id")
+
+
 // phương thức xóa
 function handleDeleteProduct(id) {
+  alert("Bạn có muốn xóa sản phẩm này không")
   const option = {
     method: "DELETE",
     headers: {
@@ -36,7 +47,13 @@ function handleDeleteProduct(id) {
       // render lại giao diện
       getProuct(renderProduct);
     });
+  
+    if(id == idEdit){
+      localStorage.clear()
+    }
 }
+
+
 
 // render product
 function renderProduct(products) {
@@ -48,7 +65,7 @@ function renderProduct(products) {
   let perProduct = []; // mảng chứa các item được render
 
   // lấy các giá trị được render ra trong một tráng
-  perProduct = products.slice(
+  perProduct = products.reverse().slice(
     (currentPage - 1) * perPage,
     (currentPage - 1) * perPage + perPage
   );
@@ -60,7 +77,6 @@ function renderProduct(products) {
   };
 
   totalPage = products.length / perPage;
-  console.log(totalPage)
 
   // sử lý next right
   const nextRight = document.getElementById("next-right");
@@ -78,13 +94,11 @@ function renderProduct(products) {
   });
 
  
-
   // sử lý next left
   const nextLeft = document.getElementById("next-left");
   nextLeft.addEventListener("click", () => {
     if (currentPage !== 1) {
       currentPage -= 1;
-      console.log(currentPage);
       perProduct = products.slice(
         (currentPage - 1) * perPage,
         (currentPage - 1) * perPage + perPage
@@ -94,6 +108,8 @@ function renderProduct(products) {
       nextLeft.removeEventListener("click");
     }
   });
+
+ 
 
   // render product ra UI
   const productTable = document.querySelector(".table_list");
@@ -110,7 +126,7 @@ function renderProduct(products) {
             <td class="text_color">${item.price} </td>
             <td><p class="label-success">${item.status}</p></td>
             <td class="table__option">
-              <i class="fa-solid fa-pencil"><a href="#updateProduct" onclick="route()"></a></i>
+              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})"><a href="#updateProduct" onclick"route()"></a></i>
               <i class="fa-solid fa-trash-can" onclick = "handleDeleteProduct(${item.id})"></i>
             </td>
           </tr>
@@ -125,7 +141,7 @@ function renderProduct(products) {
             <td class="text_color">${item.price} </td>
             <td><p class="label-danger">${item.status}</p></td>
             <td class="table__option">
-              <i class="fa-solid fa-pencil"><a href="#updateProduct" onclick="route()"></a></i>
+              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})"><a href="#updateProduct" onclick="route() "></a></i>
               <i class="fa-solid fa-trash-can" onclick = "handleDeleteProduct(${item.id})"></i>
             </td>
           </tr>
@@ -142,7 +158,7 @@ function renderProduct(products) {
             <td class="text_color">${item.price} </td>
             <td><p class="label-success">${item.status}</p></td>
             <td class="table__option">
-              <i class="fa-solid fa-pencil"><a href="#updateProduct" onclick="route()"></a></i>
+              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})" ><a href="#updateProduct" onclick="route() "></a></i>
               <i class="fa-solid fa-trash-can" onclick = "handleDeleteProduct(${item.id})"></i>
             </td>
           </tr>
@@ -157,7 +173,7 @@ function renderProduct(products) {
             <td class="text_color">${item.price} </td>
             <td><p class="label-danger">${item.status}</p></td>
             <td class="table__option">
-              <i class="fa-solid fa-pencil"><a href="#updateProduct" onclick="route()"></a></i>
+              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})" ><a href="#updateProduct" onclick="route()"></a></i>
               <i class="fa-solid fa-trash-can"  onclick = "handleDeleteProduct(${item.id})"></i>
             </td>
           </tr>

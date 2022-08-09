@@ -2,7 +2,7 @@
   <div class="form_add_header">
     <h1>Cập nhập sản phẩm</h1>
     <div class="add_option">
-      <button class="save">Lưu lại</button>
+      <button class="save" id="save">Lưu lại</button>
       <button class="back">
         <a href="#product" onclick="route()">Quay lại</a>
       </button>
@@ -12,20 +12,20 @@
   <div class="add_information">
     <div class="information_group">
       <div class="information">
-        <input type="text" placeholder="" id="name" />
-        <label for="name">Sản phẩm</label>
+        <input type="text" placeholder="" id="newName" />
+        <label for="newName">Sản phẩm</label>
         <span class="form-message"></span>
       </div>
       <div class="information">
-        <input type="number" id="amount" min="0" placeholder=" " />
-        <label for="amount">Số lượng</label>
+        <input type="number" id="newAmount" min="0" placeholder=" " />
+        <label for="newAmount">Số lượng</label>
         <span class="form-message"></span>
       </div>
     </div>
 
     <div class="information_group">
       <div class="information">
-        <select aria-label="State" class="paging__select" id="type">
+        <select aria-label="State" class="paging__select" id="newType">
           <option value="" selected disabled></option>
           <option value="Chuột">Chuột</option>
           <option value="Bàn">Bàn</option>
@@ -36,11 +36,11 @@
           <option value="Lót chuột">Lót chuột</option>
         </select>
         <i class="fa-solid fa-caret-down"></i>
-        <label class="label_select" for="type">Loại sản phẩm</label>
+        <label class="label_select" for="newType">Loại sản phẩm</label>
         <span class="form-message"></span>
       </div>
       <div class="information">
-        <select aria-label="State" class="paging__select" id="status">
+        <select aria-label="State" class="paging__select" id="newStatus">
           <option value="" selected disabled></option>
           <option value="Còn hàng">Còn Hàng</option>
           <option value="Hết hàng">Hết hàng</option>
@@ -53,13 +53,13 @@
 
     <div class="information_group">
       <div class="information">
-        <input type="date" placeholder="" id="date" max="2030-12-31" />
-        <label class="label_select" for="date">Ngày tạo</label>
+        <input type="date" placeholder="" id="newDate" max="2030-12-31" />
+        <label class="label_select" for="newDate">Ngày tạo</label>
         <span class="form-message"></span>
       </div>
       <div class="information">
-        <input type="number" placeholder="" id="price" />
-        <label for="price">Giá bán</label>
+        <input type="number" placeholder="" id="newPrice" />
+        <label for="newPrice">Giá bán</label>
         <span class="form-message"></span>
       </div>
     </div>
