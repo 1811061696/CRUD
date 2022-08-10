@@ -676,7 +676,6 @@
 }
 .product .filter {
   margin: 25px 18px 50px;
-  display: none;
 }
 .product .filter .information_group {
   display: flex;
@@ -791,6 +790,7 @@
   background-color: #fff;
 }
 .table tbody tr td {
+  position: relative;
   padding: 14px 8px;
   vertical-align: top;
   border-bottom: 1px solid #ddd;
@@ -808,19 +808,23 @@
 }
 .table tbody tr a {
   padding: 8px;
+  position: absolute;
+  right: 100px;
+  left: 16px;
 }
 .table tbody tr .fa-pencil {
   color: #1a56db;
+  padding-right: 4px;
   transition: background 0.3s linear;
 }
 .table tbody tr .fa-pencil:hover {
   cursor: pointer;
   color: #1e429f;
-  transform: scale(1.05);
 }
 .table tbody tr .fa-trash-can {
   color: #c81e1e;
   transition: background 0.3s linear;
+  padding-left: 4px;
 }
 .table tbody tr .fa-trash-can:hover {
   cursor: pointer;

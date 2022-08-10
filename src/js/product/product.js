@@ -29,6 +29,7 @@ function addIdLocalStorage(id){
 var idEdit = localStorage.getItem("Id")
 
 
+
 // phương thức xóa
 function handleDeleteProduct(id) {
   alert("Bạn có muốn xóa sản phẩm này không")
@@ -57,12 +58,14 @@ function handleDeleteProduct(id) {
 
 // render product
 function renderProduct(products) {
+  
   // phân trang
   var numberPage = document.querySelector("#numberPage");
   var currentPage = 1; // trang ban đầu
   let perPage = Number(numberPage.value); //  số item trong 1 trang
   let totalPage = 0; // tổng số trang
   let perProduct = []; // mảng chứa các item được render
+  let arrProductFilter = []
 
   // lấy các giá trị được render ra trong một tráng
   perProduct = products.reverse().slice(
@@ -109,7 +112,102 @@ function renderProduct(products) {
     }
   });
 
+  // lọc product
+  const productFilter = document.querySelector(".Product__filter")
+  const productBack = document.querySelector(".back")
+  const formFilter = document.querySelector(".filter")
+  const nameProductFilter = document.getElementById("name")
+  const amountFilter = document.getElementById("amount")
+  const typeFilter = document.getElementById("type")
+  const statusFilter = document.getElementById("status")
+  productFilter.addEventListener("click", ()=> {
+    productFilter.classList.add("display")
+    productBack.classList.remove("display")
+    formFilter.classList.remove("display")
+
+     filterProduct()
  
+  })
+ 
+  productBack.addEventListener("click", ()=> {
+    productBack.classList.add("display")
+    formFilter.classList.add("display")
+    productFilter.classList.remove("display")
+  })
+
+function filterProduct(){
+  statusFilter.onblur = () => {
+    if(statusFilter.value.length > 0){
+      for(let i = 0; i < products.length; i++){
+        if(products[i].status === statusFilter.value){
+          arrProductFilter.push(products[i])
+          perProduct = arrProductFilter
+        }
+      }
+      if(arrProductFilter.length === 0){
+        alert("Không có trạng thái phù hợp")
+      }
+      render()
+      arrProductFilter = [] 
+      statusFilter.value = ""
+    }
+  }
+
+  typeFilter.onblur = ()=> {
+    if(typeFilter.value.length > 0){
+      for(let i = 0; i < products.length; i++){
+        if(products[i].type === typeFilter.value){
+          arrProductFilter.push(products[i])
+          perProduct = arrProductFilter
+        }
+      }
+      if(arrProductFilter.length === 0){
+        alert("Không có loại sản phẩm phù hợp")
+      }
+      render()
+      arrProductFilter = [] 
+      typeFilter.value = ""
+    }
+  }
+
+  amountFilter.onblur = ()=> {
+    if(amountFilter.value.length > 0){
+      for(let i = 0; i < products.length; i++){
+        if(products[i].amount === amountFilter.value){
+          arrProductFilter.push(products[i])
+          perProduct = arrProductFilter
+        }
+      }
+      if(arrProductFilter.length === 0){
+        alert("Không có sản phẩm có số lượng phù hợp")
+      }
+      render()
+      arrProductFilter = [] 
+      amountFilter.value = ""
+    }
+  }
+
+  nameProductFilter.onblur = ()=> {
+    if(nameProductFilter.value.length > 0){
+      for(let i = 0; i < products.length; i++){
+        if(products[i].name === nameProductFilter.value){
+          arrProductFilter.push(products[i])
+          perProduct = arrProductFilter
+        }
+      }
+      if(arrProductFilter.length === 0){
+        alert("Không có sản phẩm phù hợp")
+      }
+      render()
+      arrProductFilter = [] 
+      nameProductFilter.value = ""
+    }
+  }
+}
+
+
+ 
+
 
   // render product ra UI
   const productTable = document.querySelector(".table_list");
@@ -126,7 +224,7 @@ function renderProduct(products) {
             <td class="text_color">${item.price} </td>
             <td><p class="label-success">${item.status}</p></td>
             <td class="table__option">
-              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})"><a href="#updateProduct" onclick"route()"></a></i>
+              <i class="fa-solid fa-pencil" onclick = "addIdLocalStorage(${item.id})"><a href="#updateProduct" onclick"alert("test")"></a></i>
               <i class="fa-solid fa-trash-can" onclick = "handleDeleteProduct(${item.id})"></i>
             </td>
           </tr>

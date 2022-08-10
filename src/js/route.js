@@ -59,10 +59,9 @@ const handleLocation = async () => {
   document.getElementById("main-page").innerHTML = html;
 };
 
-// console.log(window.location.href)
 const renderPage = () => {
   handleLocation();
-  window.location.href.reload();
+  window.location.reload();
 };
 
 window.addEventListener("hashchange", renderPage);

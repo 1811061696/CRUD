@@ -120,7 +120,6 @@
 
   .filter {
     margin:25px 18px 50px;
-    display: none;
 
     .information_group {
       display: flex;
@@ -252,6 +251,7 @@
       background-color: #fff;
 
       td {
+        position: relative;
         padding: 14px 8px;
         vertical-align: top;
         border-bottom: 1px solid #ddd;
@@ -270,25 +270,27 @@
       }
 
       a{
-        // z-index: 9;
         padding: 8px;
+        position: absolute;
+        right: 100px;
+        left: 16px;
       }
 
       .fa-pencil {
         color: $blue700;
-        // padding: 0 8px;
+        padding-right: 4px;
         transition: background 0.3s linear;
 
         &:hover {
           cursor: pointer;
           color: $blue800;
-          transform: scale(1.05);
         }
       }
 
       .fa-trash-can {
         color: $red700;
         transition: background 0.3s linear;
+        padding-left: 4px;
 
         &:hover {
           cursor: pointer;
